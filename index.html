@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <div class="profile-card">
+            <div class="user-info">
+              <div class="img-wrap">
+                <img src="images/image-jeremy.png" alt="" />
+              </div>
+              <div class="info">
+                <p class="report">Report for</p>
+                <h1>Jeremy Robson</h1>
+              </div>
+            </div>
+
+            <div class="time-period-selector">
+              <button class="time-filter" data-value="daily">Daily</button>
+              <button class="time-filter active" data-value="weekly">
+                Weekly
+              </button>
+              <button class="time-filter" data-value="monthly">Monthly</button>
+            </div>
+          </div>
+
+          <div class="activity-card" id="work-card">
+            <div class="task-summary">
+              <div class="task-header">
+                <h2 class="category-title"></h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="ellipsis"
+                  class="icon"
+                />
+              </div>
+              <div class="content">
+                <h3 class="hours-spent"></h3>
+                <p class="previous-week"></p>
+              </div>
+            </div>
+          </div>
+          <div class="activity-card" id="play-card">
+            <div class="task-summary">
+              <div class="task-header">
+                <h2 class="category-title"></h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="ellipsis"
+                  class="icon"
+                />
+              </div>
+              <div class="content">
+                <h3 class="hours-spent"></h3>
+                <p class="previous-week"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="activity-card" id="study-card">
+            <div class="task-summary">
+              <div class="task-header">
+                <h2 class="category-title"></h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="ellipsis"
+                  class="icon"
+                />
+              </div>
+              <div class="content">
+                <h3 class="hours-spent"></h3>
+                <p class="previous-week"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="activity-card" id="exercise-card">
+            <div class="task-summary">
+              <div class="task-header">
+                <h2 class="category-title"></h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="ellipsis"
+                  class="icon"
+                />
+              </div>
+              <div class="content">
+                <h3 class="hours-spent"></h3>
+                <p class="previous-week"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="activity-card" id="social-card">
+            <div class="task-summary">
+              <div class="task-header">
+                <h2 class="category-title"></h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="ellipsis"
+                  class="icon"
+                />
+              </div>
+              <div class="content">
+                <h3 class="hours-spent"></h3>
+                <p class="previous-week"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="activity-card" id="selfcare-card">
+            <div class="task-summary">
+              <div class="task-header">
+                <h2 class="category-title"></h2>
+                <img
+                  src="images/icon-ellipsis.svg"
+                  alt="ellipsis"
+                  class="icon"
+                />
+              </div>
+              <div class="content">
+                <h3 class="hours-spent"></h3>
+                <p class="previous-week"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
