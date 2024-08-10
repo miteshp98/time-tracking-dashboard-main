@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  --Lightredwork: hsl(15, 100%, 70%);
+  --Softblueplay: hsl(195, 74%, 62%);
+  --Lightredstudy: hsl(348, 100%, 68%);
+  --Limegreenexercise: hsl(145, 58%, 55%);
+  --Violetsocial: hsl(264, 64%, 52%);
+  --Softorangeselfcare: hsl(43, 84%, 65%);
+
+  --Verydarkblue: hsl(226, 43%, 10%);
+  --Darkblue: hsl(235, 46%, 20%);
+  --Desaturatedblue: hsl(235, 45%, 61%);
+  --PaleBlue: hsl(236, 100%, 87%);
+
+  --font: "Rubik", sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--Verydarkblue);
+  padding: 2rem;
+}
+
+section {
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 25px 25px;
+}
+
+.profile-card {
+  grid-area: 1 / 1 / 3 / 2;
+  background-color: var(--Darkblue);
+  width: 300px;
+  height: 600px;
+  border-radius: 15px;
+}
+
+.user-info {
+  height: 400px;
+  background-color: var(--Blue);
+  border-radius: 15px;
+  padding: 2.5rem 2.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-wrap {
+  width: 80px;
+  flex-grow: 1;
+}
+
+.img-wrap > img {
+  width: 100%;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.report {
+  color: var(--PaleBlue);
+  margin: 5px 0;
+}
+
+h1 {
+  font-size: 2.8em;
+  font-weight: 300;
+  color: white;
+}
+
+.time-period-selector {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.8rem;
+}
+
+.time-filter {
+  text-decoration: none;
+  color: var(--Desaturatedblue);
+  font-size: 1.2em;
+  font-weight: 400;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.time-filter:hover {
+  color: white;
+}
+
+.activity-card {
+  width: 100%;
+  border-radius: 15px 15px 20px 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+#work-card {
+  background: url(images/icon-work.svg) no-repeat;
+  background-color: var(--Lightredwork);
+  background-position: right 20px top;
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.task-summary {
+  position: absolute;
+  background: var(--Darkblue);
+  width: 100%;
+  height: 80%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 15px;
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.8s ease-in-out;
+}
+
+#play-card {
+  background: url(images/icon-play.svg) no-repeat;
+  background-color: var(--Softblueplay);
+  background-position: right 20px top;
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.task-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.category-title {
+  color: white;
+  font-weight: 400;
+  font-size: 1.3em;
+  flex-grow: 1;
+}
+
+.hours-spent {
+  margin-top: 40px;
+  font-size: 3.8em;
+  font-weight: 300;
+  color: white;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.previous-week {
+  color: var(--PaleBlue);
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+#study-card {
+  background: url(images/icon-study.svg) no-repeat;
+  background-color: var(--Lightredstudy);
+  background-position: right 20px top;
+
+  grid-area: 1 / 4 / 2 / 5;
+}
+
+#exercise-card {
+  background: url(images/icon-exercise.svg) no-repeat;
+  background-color: var(--Limegreenexercise);
+  background-position: right 20px top;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.wellbeing-group {
+  grid-area: 1 / 4 / 3 / 5;
+}
+
+#social-card {
+  background: url(images/icon-social.svg) no-repeat;
+  background-color: var(--Violetsocial);
+  background-position: right 20px top;
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+#selfcare-card {
+  background: url(images/icon-self-care.svg) no-repeat;
+  background-color: var(--Softorangeselfcare);
+  background-position: right 20px top;
+  grid-area: 2 / 4 / 3 / 5;
+}
+
+.active {
+  color: white;
+}
+
+.activity-card:hover .task-summary {
+  background-color: hsl(237, 31%, 36%);
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    transform: scale(0.95);
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  section {
+    height: 100%;
+  }
+  .container {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 0.7fr);
+  }
+  .profile-card {
+    width: 100%;
+    height: 100%;
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  .img-wrap {
+    width: 100px;
+    flex-grow: 0;
+  }
+  .img-wrap > img {
+    width: 90px;
+  }
+  .user-info {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    height: 200px;
+    padding: 2.5rem;
+  }
+  h1 {
+    font-size: 2.4em;
+  }
+  .hours-spent {
+    font-size: 3.3em;
+  }
+  #work-card {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  #play-card {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  #study-card {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  #exercise-card {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  #social-card {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  #selfcare-card {
+    grid-area: 4 / 2 / 5 / 3;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    grid-template-rows: repeat(4, 0.9fr);
+  }
+  .time-period-selector {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .hours-spent {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(7, 0.7fr);
+    transform: scale(1);
+    gap: 30px 0;
+  }
+  .time-period-selector {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  h1 {
+    font-size: 1.95em;
+  }
+  .img-wrap {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-wrap > img {
+    width: 75px;
+  }
+
+  .category-title {
+    font-size: 1.3em;
+  }
+  #work-card {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  #play-card {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  #study-card {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  #exercise-card {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+  #social-card {
+    grid-area: 6 / 1 / 7 / 2;
+  }
+  #selfcare-card {
+    grid-area: 7 / 1 / 8 / 2;
+  }
+  .content {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hours-spent {
+    margin: 0;
+    font-size: 3.1em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .user-info {
+    padding: 1rem 1.5rem;
+    height: 180px;
+  }
+  .hours-spent {
+    font-size: 2.2em;
+  }
+  .category-title {
+    font-size: 1.1em;
+  }
+}
